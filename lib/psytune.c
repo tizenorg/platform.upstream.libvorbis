@@ -202,7 +202,7 @@ void analysis(char *base,int i,float *v,int n,int bark,int dB){
     FILE *of;
     char buffer[80];
     sprintf(buffer,"%s_%d.m",base,i);
-    of=fopen(buffer,"w");
+    of=fopen(buffer,"we");
 
     for(j=0;j<n;j++){
       if(dB && v[j]==0)

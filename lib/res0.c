@@ -93,7 +93,7 @@ void res0_free_look(vorbis_look_residue *i){
 
             /* long and short into the same bucket by current convention */
             sprintf(buffer,"res_sub%d_part%d_pass%d.vqd",look->submap,j,k);
-            of=fopen(buffer,"a");
+            of=fopen(buffer,"ae");
 
             for(l=0;l<statebook->entries;l++)
               fprintf(of,"%d:%ld\n",l,look->training_data[k][j][l]);
@@ -462,7 +462,7 @@ static long **_01class(vorbis_block *vb,vorbis_look_residue *vl,
 
     for(i=0;i<ch;i++){
       sprintf(buffer,"resaux_%d.vqd",look->train_seq);
-      of=fopen(buffer,"a");
+      of=fopen(buffer,"ae");
       for(j=0;j<partvals;j++)
         fprintf(of,"%ld, ",partword[i][j]);
       fprintf(of,"\n");
@@ -521,7 +521,7 @@ static long **_2class(vorbis_block *vb,vorbis_look_residue *vl,int **in,
 
 #ifdef TRAIN_RESAUX
   sprintf(buffer,"resaux_%d.vqd",look->train_seq);
-  of=fopen(buffer,"a");
+  of=fopen(buffer,"ae");
   for(i=0;i<partvals;i++)
     fprintf(of,"%ld, ",partword[0][i]);
   fprintf(of,"\n");

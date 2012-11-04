@@ -1010,7 +1010,7 @@ int ov_open(FILE *f,OggVorbis_File *vf,const char *initial,long ibytes){
 
 int ov_fopen(const char *path,OggVorbis_File *vf){
   int ret;
-  FILE *f = fopen(path,"rb");
+  FILE *f = fopen(path,"rbe");
   if(!f) return -1;
 
   ret = ov_open(f,vf,NULL,0);
