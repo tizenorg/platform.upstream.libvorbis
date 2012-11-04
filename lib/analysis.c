@@ -73,7 +73,7 @@ void _analysis_output_always(char *base,int i,float *v,int n,int bark,int dB,ogg
   char buffer[80];
 
   sprintf(buffer,"%s_%d.m",base,i);
-  of=fopen(buffer,"w");
+  of=fopen(buffer,"we");
 
   if(!of)perror("failed to open data dump file");
 
