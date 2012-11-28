@@ -5,7 +5,7 @@ License:        BSD-3-Clause
 Summary:        The Vorbis General Audio Compression Codec
 Url:            http://www.vorbis.com/
 Group:          System/Libraries
-Source:         %{name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.xz
 Source2:        baselibs.conf
 BuildRequires:  fdupes
 BuildRequires:  libogg-devel
