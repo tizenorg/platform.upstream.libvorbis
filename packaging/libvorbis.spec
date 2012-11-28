@@ -7,11 +7,6 @@ Url:            http://www.vorbis.com/
 Group:          System/Libraries
 Source:         %{name}-%{version}.tar.bz2
 Source2:        baselibs.conf
-Patch1:         libvorbis-lib64.dif
-Patch2:         libvorbis-m4.dif
-Patch10:        libvorbis-pkgconfig.patch
-Patch11:        vorbis-fix-linking.patch
-Patch12:        vorbis-ocloexec.patch
 BuildRequires:  fdupes
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
@@ -112,19 +107,22 @@ find %{buildroot}%{_docdir}/ -empty -delete
 
 %files 
 %defattr(0644,root,root,0755)
+%license COPYING 
 %{_libdir}/libvorbis.so.0*
 
 %files -n libvorbisenc
 %defattr(0644,root,root,0755)
+%license COPYING 
 %{_libdir}/libvorbisenc.so.2*
 
 %files -n libvorbisfile
 %defattr(0644,root,root,0755)
+%license COPYING 
 %{_libdir}/libvorbisfile.so.3*
 
 %files devel
 %defattr(-,root,root)
-%doc COPYING AUTHORS README *.txt
+%license COPYING 
 %{_datadir}/aclocal/*.m4
 %{_includedir}/vorbis
 %{_libdir}/lib*.so
