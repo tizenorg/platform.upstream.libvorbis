@@ -7,6 +7,7 @@ Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
 Source:         %{name}-%{version}.tar.xz
 Source2:        baselibs.conf
+Source1001: 	libvorbis.manifest
 BuildRequires:  fdupes
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
@@ -62,6 +63,7 @@ to compile and develop applications that use libvorbis.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 # Fix optimization level
@@ -95,21 +97,25 @@ install -c -m 0644 doc/Vorbis_I_spec.* %{buildroot}%{_docdir}/%{name}
 %postun -n libvorbisfile -p /sbin/ldconfig
 
 %files 
+%manifest %{name}.manifest
 %defattr(0644,root,root,0755)
 %license COPYING 
 %{_libdir}/libvorbis.so.0*
 
 %files -n libvorbisenc
+%manifest %{name}.manifest
 %defattr(0644,root,root,0755)
 %license COPYING 
 %{_libdir}/libvorbisenc.so.2*
 
 %files -n libvorbisfile
+%manifest %{name}.manifest
 %defattr(0644,root,root,0755)
 %license COPYING 
 %{_libdir}/libvorbisfile.so.3*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING 
 %{_datadir}/aclocal/*.m4
