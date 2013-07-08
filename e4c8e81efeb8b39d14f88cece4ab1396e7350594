@@ -1,0 +1,9 @@
+Change-Id: Ie4c8e81efeb8b39d14f88cece4ab1396e7350594
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Code-Review+1: Michael Demeter <michael.demeter@intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:37:13 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5202
+Project: platform/upstream/libvorbis
+Branch: refs/heads/tizen
