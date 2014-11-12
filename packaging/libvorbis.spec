@@ -1,5 +1,5 @@
 Name:           libvorbis
-Version:        1.3.3
+Version:        1.3.4
 Release:        0
 License:        BSD-3-Clause
 Summary:        The Vorbis General Audio Compression Codec
@@ -7,7 +7,7 @@ Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
 Source:         %{name}-%{version}.tar.xz
 Source2:        baselibs.conf
-Source1001: 	libvorbis.manifest
+Source1001:     libvorbis.manifest
 BuildRequires:  fdupes
 BuildRequires:  libogg-devel
 BuildRequires:  libtool
@@ -69,12 +69,11 @@ cp %{SOURCE1001} .
 # Fix optimization level
 sed -i s,-O20,-O3,g configure.ac
 
-autoreconf -fiv
-%configure --disable-examples --disable-static
-make %{?_smp_mflags}
+%autogen --disable-examples --disable-static
+%__make %{?_smp_mflags}
 
 %check
-make check
+%__make check
 
 %install
 %make_install
@@ -122,5 +121,3 @@ install -c -m 0644 doc/Vorbis_I_spec.* %{buildroot}%{_docdir}/%{name}
 %{_includedir}/vorbis
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*.pc
-
-%changelog
