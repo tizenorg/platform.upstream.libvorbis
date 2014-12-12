@@ -53,9 +53,9 @@ Summary:        Include Files and Libraries mandatory for Ogg Vorbis Development
 Group:          Development/Libraries
 Requires:       glibc-devel
 Requires:       libogg-devel
-Requires:       libvorbis = %{version}
-Requires:       libvorbisenc = %{version}
-Requires:       libvorbisfile = %{version}
+Requires:       libvorbis = %{version}-%{release}
+Requires:       libvorbisenc = %{version}-%{release}
+Requires:       libvorbisfile = %{version}-%{release}
 
 %description devel
 This package contains all necessary include files and libraries needed
