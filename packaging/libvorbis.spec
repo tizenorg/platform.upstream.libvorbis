@@ -1,7 +1,7 @@
 Name:           libvorbis
 Version:        1.3.4
 Release:        0
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        The Vorbis General Audio Compression Codec
 Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
